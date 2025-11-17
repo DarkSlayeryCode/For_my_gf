@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Joyeux Anniversaire à toi Béboune 💓💖✨</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                /* Primitive Color Tokens */
+                --color-white: rgba(255, 255, 255, 1);
+                --color-black: rgba(0, 0, 0, 1);
+                --color-cream-50: rgba(252, 252, 249, 1);
+                --color-cream-100: rgba(255, 255, 253, 1);
+                --color-gray-200: rgba(245, 245, 245, 1);
+                --color-gray-300: rgba(167, 169, 169, 1);
+                --color-gray-400: rgba(119, 124, 124, 1);
+                --color-slate-500: rgba(98, 108, 113, 1);
+                --color-brown-600: rgba(94, 82, 64, 1);
+                --color-charcoal-700: rgba(31, 33, 33, 1);
+                --color-charcoal-800: rgba(38, 40, 40, 1);
+                --color-slate-900: rgba(19, 52, 59, 1);
+                --color-teal-300: rgba(50, 184, 198, 1);
+                --color-teal-400: rgba(45, 166, 178, 1);
+                --color-teal-500: rgba(33, 128, 141, 1);
+                --color-teal-600: rgba(29, 116, 128, 1);
+                --color-teal-700: rgba(26, 104, 115, 1);
+                --color-teal-800: rgba(41, 150, 161, 1);
+                --color-red-400: rgba(255, 84, 89, 1);
+                --color-red-500: rgba(192, 21, 47, 1);
+                --color-orange-400: rgba(230, 129, 97, 1);
+                --color-orange-500: rgba(168, 75, 47, 1);
+
+                /* Pastel Magic Colors */
+                --pastel-pink: rgba(255, 182, 193, 1);
+                --pastel-lavender: rgba(230, 190, 255, 1);
+                --pastel-blue: rgba(173, 216, 230, 1);
+                --pastel-peach: rgba(255, 218, 185, 1);
+                --pastel-mint: rgba(189, 252, 201, 1);
+                --pastel-cream: rgba(255, 253, 240, 1);
+
+                /* Typography */
+                --font-family-base:
+                    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                    Roboto, sans-serif;
+                --font-family-serif: "Cormorant Garamond", serif;
+                --font-family-script: "Dancing Script", cursive;
+
+                /* Spacing */
+                --space-4: 4px;
+                --space-8: 8px;
+                --space-12: 12px;
+                --space-16: 16px;
+                --space-24: 24px;
+                --space-32: 32px;
+                --space-48: 48px;
+                --space-64: 64px;
+
+                /* Border Radius */
+                --radius-sm: 8px;
+                --radius-md: 16px;
+                --radius-lg: 24px;
+                --radius-xl: 32px;
+
+                /* Shadows */
+                --shadow-soft: 0 8px 32px rgba(255, 182, 193, 0.2);
+                --shadow-glow: 0 0 40px rgba(255, 182, 193, 0.4);
+            }
+
+            @font-face {
+                font-family: "FKGroteskNeue";
+                src: url("https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2")
+                    format("woff2");
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: var(--font-family-base);
+                background: linear-gradient(
+                    135deg,
+                    #ffe9f5 0%,
+                    #ffd4e5 25%,
+                    #e8d4ff 50%,
+                    #d4e4ff 75%,
+                    #ffe9d4 100%
+                );
+                background-attachment: fixed;
+                color: #4a3650;
+                overflow-x: hidden;
+                line-height: 1.6;
+            }
+
+            /* Floating Hearts Background */
+            .hearts-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 1;
+                overflow: hidden;
+            }
+
+            .floating-heart {
+                position: absolute;
+                font-size: 24px;
+                opacity: 0.6;
+                animation: floatHeart 8s ease-in-out infinite;
+            }
+
+            @keyframes floatHeart {
+                0%,
+                100% {
+                    transform: translateY(0) rotate(0deg);
+                }
+                50% {
+                    transform: translateY(-30px) rotate(5deg);
+                }
+            }
+
+            /* Hero Section */
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: var(--space-32);
+                position: relative;
+                z-index: 2;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 900px;
+                animation: fadeInUp 1.5s ease;
+            }
+
+            .hero h1 {
+                font-family: var(--font-family-script);
+                font-size: clamp(48px, 8vw, 96px);
+                font-weight: 700;
+                background: linear-gradient(135deg, #ff69b4, #ba55d3, #ff1493);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: var(--space-24);
+                letter-spacing: 2px;
+                animation: glow 3s ease-in-out infinite;
+            }
+
+            @keyframes glow {
+                0%,
+                100% {
+                    filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.5));
+                }
+                50% {
+                    filter: drop-shadow(0 0 40px rgba(186, 85, 211, 0.8));
+                }
+            }
+
+            .hero-subtitle {
+                font-family: var(--font-family-serif);
+                font-size: clamp(20px, 3vw, 32px);
+                color: #8b4789;
+                font-weight: 300;
+                margin-bottom: var(--space-48);
+                font-style: italic;
+            }
+
+            .hero-image-container {
+                position: relative;
+                max-width: 600px;
+                margin: 0 auto;
+                border-radius: var(--radius-xl);
+                overflow: hidden;
+                box-shadow: var(--shadow-glow);
+                animation: floatImage 6s ease-in-out infinite;
+            }
+
+            .hero-image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            @keyframes floatImage {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Surreal Art Section */
+            .surreal-section {
+                padding: var(--space-64) var(--space-32);
+                position: relative;
+                z-index: 2;
+            }
+
+            .surreal-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(20px);
+                border-radius: var(--radius-xl);
+                padding: var(--space-48);
+                box-shadow: var(--shadow-soft);
+                border: 2px solid rgba(255, 255, 255, 0.5);
+            }
+
+            .section-title {
+                font-family: var(--font-family-serif);
+                font-size: clamp(32px, 5vw, 56px);
+                font-weight: 700;
+                text-align: center;
+                color: #ba55d3;
+                margin-bottom: var(--space-48);
+                position: relative;
+            }
+
+            .section-title::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 4px;
+                background: linear-gradient(90deg, #ff69b4, #ba55d3);
+                margin: var(--space-16) auto 0;
+                border-radius: 2px;
+            }
+
+            .surreal-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: var(--space-32);
+                margin-top: var(--space-48);
+            }
+
+            .surreal-card {
+                position: relative;
+                border-radius: var(--radius-lg);
+                overflow: hidden;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.4s ease,
+                    box-shadow 0.4s ease;
+                cursor: pointer;
+            }
+
+            .surreal-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 16px 48px rgba(186, 85, 211, 0.3);
+            }
+
+            .surreal-card img {
+                width: 100%;
+                height: 350px;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+
+            .surreal-card:hover img {
+                transform: scale(1.1);
+            }
+
+            .card-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(
+                    to top,
+                    rgba(138, 43, 226, 0.9),
+                    transparent
+                );
+                padding: var(--space-24);
+                color: white;
+                transform: translateY(100%);
+                transition: transform 0.4s ease;
+            }
+
+            .surreal-card:hover .card-overlay {
+                transform: translateY(0);
+            }
+
+            .card-overlay h3 {
+                font-family: var(--font-family-serif);
+                font-size: 24px;
+                margin-bottom: var(--space-8);
+            }
+
+            /* Gallery Section */
+            .gallery-section {
+                padding: var(--space-64) var(--space-32);
+                position: relative;
+                z-index: 2;
+                background: linear-gradient(
+                    180deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent
+                );
+            }
+
+            .gallery-container {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: var(--space-24);
+                margin-top: var(--space-48);
+            }
+
+            .gallery-item {
+                position: relative;
+                border-radius: var(--radius-lg);
+                overflow: hidden;
+                aspect-ratio: 1 / 1;
+                box-shadow: var(--shadow-soft);
+                transition: all 0.4s ease;
+                animation: fadeIn 0.6s ease forwards;
+                opacity: 0;
+            }
+
+            .gallery-item:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .gallery-item:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .gallery-item:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .gallery-item:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            .gallery-item:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+            .gallery-item:nth-child(6) {
+                animation-delay: 0.6s;
+            }
+            .gallery-item:nth-child(7) {
+                animation-delay: 0.7s;
+            }
+            .gallery-item:nth-child(8) {
+                animation-delay: 0.8s;
+            }
+            .gallery-item:nth-child(9) {
+                animation-delay: 0.9s;
+            }
+            .gallery-item:nth-child(10) {
+                animation-delay: 1s;
+            }
+            .gallery-item:nth-child(11) {
+                animation-delay: 1.1s;
+            }
+            .gallery-item:nth-child(12) {
+                animation-delay: 1.2s;
+            }
+            .gallery-item:nth-child(13) {
+                animation-delay: 1.3s;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.9);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            .gallery-item:hover {
+                transform: scale(1.05) rotate(2deg);
+                box-shadow: 0 16px 48px rgba(255, 105, 180, 0.4);
+                z-index: 10;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            /* Surprise Section */
+            .surprise-section {
+                padding: var(--space-64) var(--space-32);
+                position: relative;
+                z-index: 2;
+            }
+
+            .surprise-container {
+                max-width: 700px;
+                margin: 0 auto;
+                text-align: center;
+                background: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(20px);
+                border-radius: var(--radius-xl);
+                padding: var(--space-64) var(--space-48);
+                box-shadow: var(--shadow-glow);
+                border: 3px solid rgba(255, 182, 193, 0.3);
+            }
+
+            .surprise-button {
+                font-family: var(--font-family-serif);
+                font-size: 28px;
+                font-weight: 600;
+                color: white;
+                background: linear-gradient(135deg, #ff69b4, #ba55d3, #ff1493);
+                border: none;
+                padding: var(--space-24) var(--space-48);
+                border-radius: 50px;
+                cursor: pointer;
+                box-shadow: 0 8px 24px rgba(255, 105, 180, 0.4);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .surprise-button::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: translate(-50%, -50%);
+                transition:
+                    width 0.6s ease,
+                    height 0.6s ease;
+            }
+
+            .surprise-button:hover::before {
+                width: 300px;
+                height: 300px;
+            }
+
+            .surprise-button:hover {
+                transform: translateY(-5px) scale(1.05);
+                box-shadow: 0 16px 48px rgba(186, 85, 211, 0.6);
+            }
+
+            .surprise-button:active {
+                transform: translateY(-2px) scale(1.02);
+            }
+
+            .surprise-button span {
+                position: relative;
+                z-index: 1;
+            }
+
+            .surprise-message {
+                margin-top: var(--space-48);
+                font-family: var(--font-family-serif);
+                font-size: clamp(24px, 4vw, 36px);
+                color: #ba55d3;
+                font-weight: 600;
+                line-height: 1.6;
+                font-style: italic;
+                opacity: 0;
+                transform: scale(0.8);
+                transition: all 0.6s ease;
+                background: linear-gradient(135deg, #ff69b4, #ba55d3);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .surprise-message.show {
+                opacity: 1;
+                transform: scale(1);
+                animation: sparkle 2s ease infinite;
+            }
+
+            @keyframes sparkle {
+                0%,
+                100% {
+                    filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
+                }
+                50% {
+                    filter: drop-shadow(0 0 20px rgba(186, 85, 211, 0.8));
+                }
+            }
+
+            /* Footer */
+            .footer {
+                padding: var(--space-64) var(--space-32);
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+            .footer-content {
+                font-family: var(--font-family-script);
+                font-size: clamp(24px, 3vw, 36px);
+                color: #8b4789;
+                font-weight: 600;
+            }
+
+            /* Sparkle Effect */
+            .sparkle {
+                position: fixed;
+                pointer-events: none;
+                animation: sparkleFloat 2s ease-out forwards;
+                z-index: 9999;
+            }
+
+            @keyframes sparkleFloat {
+                0% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateY(-100px) scale(0);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .hero {
+                    min-height: 100vh;
+                    padding: var(--space-24);
+                }
+
+                .surreal-content,
+                .surprise-container {
+                    padding: var(--space-32) var(--space-24);
+                }
+
+                .gallery-grid {
+                    grid-template-columns: repeat(
+                        auto-fill,
+                        minmax(150px, 1fr)
+                    );
+                    gap: var(--space-16);
+                }
+
+                .surreal-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .surprise-button {
+                    font-size: 20px;
+                    padding: var(--space-16) var(--space-32);
+                }
+            }
+
+            /* Scroll animations */
+            .reveal {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: all 0.8s ease;
+            }
+
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Floating Hearts Background -->
+        <div class="hearts-container" id="heartsContainer"></div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Joyeux Anniversaire à toi Béboune ♥️</h1>
+                <p class="hero-subtitle">To my Wrld ❣️✨</p>
+                <div class="hero-image-container">
+                    <img src="beautiful_smile.jpeg" alt="Beautiful smile" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Surreal Art Section -->
+        <section class="surreal-section reveal">
+            <div class="surreal-content">
+                <h2 class="section-title">
+                    Merci d'illuminer ma vie avec ta beauté 🫦
+                </h2>
+                <div class="surreal-grid">
+                    <div class="surreal-card">
+                        <img
+                            src="happy_moment.jpeg"
+                            alt="Happy moments together"
+                        />
+                        <div class="card-overlay">
+                            <h3>Joyful Times</h3>
+                        </div>
+                    </div>
+                    <div class="surreal-card">
+                        <img src="elegant.jpeg" alt="Elegant beauty" />
+                        <div class="card-overlay">
+                            <h3>Pure Elegance</h3>
+                        </div>
+                    </div>
+                    <div class="surreal-card">
+                        <img src="vibrant.jpeg" alt="Vibrant spirit" />
+                        <div class="card-overlay">
+                            <h3>Radiant Soul</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section reveal">
+            <div class="gallery-container">
+                <h2 class="section-title">Beautiful Memories</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img
+                            src="beautiful_lovers.jpeg"
+                            alt="Beautiful friendship"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="focused.jpeg" alt="Focused and determined" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="stylish.jpeg" alt="Stylish vibes" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="cool.jpeg" alt="Cool and confident" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="quality.jpeg" alt="Quality time" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="bright.jpeg" alt="Bright smiles" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="natural.jpeg" alt="Natural beauty" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="thoughts.jpeg" alt="Thoughtful moment" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="candid.jpeg" alt="Candid joy" />
+                    </div>
+                    <div class="gallery-item">
+                        <img src="funny.jpeg" alt="Fun times" />
+                    </div>
+                    <!--<div class="gallery-item">
+                        <img src="golden.jpg" alt="Golden hour" />
+                    </div>-->
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Section -->
+        <section class="surprise-section reveal">
+            <div class="surprise-container">
+                <button
+                    class="surprise-button"
+                    id="surpriseBtn"
+                    onclick="revealSurprise()"
+                >
+                    <span>✨ Petite surprise pour la fin 🤭! ✨</span>
+                </button>
+                <div class="surprise-message" id="surpriseMessage">
+                    Mon cœur a trouvé sa maison dans le tien, Tu es mon hier,
+                    mon aujourd'hui, Et tous mes lendemains. Le plus beau des
+                    voyages, C'est celui que je fais chaque jour vers toi,
+                    Chaque jour passé à t'aimer Est une promesse de bonheur.
+                    Avec toi, tout devient évident— Mon Kookaburra qui aime un
+                    peu trop le sucre, Joyeux Anniversaire! Je
+                    t'aiiiiiiimmmmmmmmmmeeeeeee💝💝❤️‍🔥❤️‍🔥💞💞
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">Forever &amp; Always ✨💖</div>
+        </footer>
+
+        <script>
+            // Floating Hearts
+            function createFloatingHearts() {
+                const container = document.getElementById("heartsContainer");
+                const hearts = ["💖", "💕", "💗", "💓", "💝", "💞", "✨", "🌸"];
+                const colors = [
+                    "#FFB6C1",
+                    "#E6BEFF",
+                    "#ADD8E6",
+                    "#FFDAB9",
+                    "#BDFCC9",
+                ];
+
+                for (let i = 0; i < 25; i++) {
+                    const heart = document.createElement("div");
+                    heart.className = "floating-heart";
+                    heart.textContent =
+                        hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = Math.random() * 100 + "%";
+                    heart.style.top = Math.random() * 100 + "%";
+                    heart.style.color =
+                        colors[Math.floor(Math.random() * colors.length)];
+                    heart.style.animationDelay = Math.random() * 4 + "s";
+                    heart.style.animationDuration = Math.random() * 4 + 6 + "s";
+                    container.appendChild(heart);
+                }
+            }
+
+            // Reveal surprise message
+            function revealSurprise() {
+                const message = document.getElementById("surpriseMessage");
+                const btn = document.getElementById("surpriseBtn");
+
+                message.classList.add("show");
+                btn.style.transform = "scale(0.95)";
+
+                // Create sparkles
+                createSparkles(btn);
+
+                setTimeout(() => {
+                    btn.style.transform = "scale(1)";
+                }, 200);
+            }
+
+            // Create sparkle effect
+            function createSparkles(element) {
+                const rect = element.getBoundingClientRect();
+                const sparkles = ["✨", "💫", "⭐", "🌟"];
+
+                for (let i = 0; i < 15; i++) {
+                    const sparkle = document.createElement("div");
+                    sparkle.className = "sparkle";
+                    sparkle.textContent =
+                        sparkles[Math.floor(Math.random() * sparkles.length)];
+                    sparkle.style.left =
+                        rect.left +
+                        rect.width / 2 +
+                        (Math.random() - 0.5) * 200 +
+                        "px";
+                    sparkle.style.top =
+                        rect.top +
+                        rect.height / 2 +
+                        (Math.random() - 0.5) * 200 +
+                        "px";
+                    sparkle.style.fontSize = Math.random() * 20 + 15 + "px";
+                    document.body.appendChild(sparkle);
+
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 2000);
+                }
+            }
+
+            // Scroll reveal animation
+            function reveal() {
+                const reveals = document.querySelectorAll(".reveal");
+
+                reveals.forEach((element) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add("active");
+                    }
+                });
+            }
+
+            // Initialize
+            window.addEventListener("load", () => {
+                createFloatingHearts();
+                reveal();
+            });
+
+            window.addEventListener("scroll", reveal);
+
+            // Add parallax effect to hero
+            window.addEventListener("scroll", () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector(".hero");
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        </script>
+    </body>
+</html>
